@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="BreakingBadQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1485036574_breaking-bad1" translatesAutoresizingMaskIntoConstraints="NO" id="i5l-Sm-lmg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caE-x3-wnv">
+                                <rect key="frame" x="94" y="464" width="132" height="42"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Show quote">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="P0G-ey-HIb" kind="presentation" id="0f8-0G-MhC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i5l-Sm-lmg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0QG-Ik-1z4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="caE-x3-wnv" secondAttribute="bottom" constant="62" id="20t-zL-ljU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i5l-Sm-lmg" secondAttribute="trailing" id="Oss-1M-TrM"/>
+                            <constraint firstAttribute="bottom" secondItem="i5l-Sm-lmg" secondAttribute="bottom" id="XxW-n9-fg2"/>
+                            <constraint firstItem="caE-x3-wnv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="deX-DA-Kpb"/>
+                            <constraint firstItem="i5l-Sm-lmg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rtH-LE-Pb8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="caE-x3-wnv" secondAttribute="trailing" constant="94" id="xZS-64-4Vb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="100"/>
+        </scene>
+        <!--Description View Controller-->
+        <scene sceneID="nlL-Tx-uxj">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0w-nk-hAn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="P0G-ey-HIb" customClass="DescriptionViewController" customModule="BreakingBadQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6d-Lt-JAU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4me-N4-KKh">
+                                <rect key="frame" x="16" y="16" width="288" height="389"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5f-yg-o2c">
+                                <rect key="frame" x="80" y="455" width="160" height="38"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="show next quote">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showNextQuote" destination="P0G-ey-HIb" eventType="touchUpInside" id="JRp-Q9-XYt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YPr-ib-tBk"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q5f-yg-o2c" firstAttribute="leading" secondItem="YPr-ib-tBk" secondAttribute="leading" constant="80" id="3aw-My-NNB"/>
+                            <constraint firstItem="4me-N4-KKh" firstAttribute="top" secondItem="YPr-ib-tBk" secondAttribute="top" constant="16" id="9fs-jc-ekc"/>
+                            <constraint firstItem="YPr-ib-tBk" firstAttribute="trailing" secondItem="q5f-yg-o2c" secondAttribute="trailing" constant="80" id="EN0-pw-E5J"/>
+                            <constraint firstItem="YPr-ib-tBk" firstAttribute="bottom" secondItem="q5f-yg-o2c" secondAttribute="bottom" constant="55" id="Fv1-sq-Wtw"/>
+                            <constraint firstItem="q5f-yg-o2c" firstAttribute="top" secondItem="4me-N4-KKh" secondAttribute="bottom" constant="50" id="Hmd-50-etC"/>
+                            <constraint firstItem="YPr-ib-tBk" firstAttribute="trailing" secondItem="4me-N4-KKh" secondAttribute="trailing" constant="16" id="rHJ-dg-cAD"/>
+                            <constraint firstItem="4me-N4-KKh" firstAttribute="leading" secondItem="YPr-ib-tBk" secondAttribute="leading" constant="16" id="rJS-Y2-x07"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textQuote" destination="4me-N4-KKh" id="85W-wz-oLN"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="806" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1485036574_breaking-bad1" width="1080" height="1920"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
