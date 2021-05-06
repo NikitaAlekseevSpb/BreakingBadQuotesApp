@@ -56,7 +56,6 @@
         <!--Description View Controller-->
         <scene sceneID="nlL-Tx-uxj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t0w-nk-hAn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="P0G-ey-HIb" customClass="DescriptionViewController" customModule="BreakingBadQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E6d-Lt-JAU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
@@ -85,6 +84,10 @@
                                     <action selector="showNextQuote" destination="P0G-ey-HIb" eventType="touchUpInside" id="JRp-Q9-XYt"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Xks-O9-yL4">
+                                <rect key="frame" x="141.5" y="255.5" width="37" height="37"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YPr-ib-tBk"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,14 +99,18 @@
                             <constraint firstItem="q5f-yg-o2c" firstAttribute="top" secondItem="4me-N4-KKh" secondAttribute="bottom" constant="50" id="Hmd-50-etC"/>
                             <constraint firstItem="YPr-ib-tBk" firstAttribute="trailing" secondItem="4me-N4-KKh" secondAttribute="trailing" constant="16" id="rHJ-dg-cAD"/>
                             <constraint firstItem="4me-N4-KKh" firstAttribute="leading" secondItem="YPr-ib-tBk" secondAttribute="leading" constant="16" id="rJS-Y2-x07"/>
+                            <constraint firstItem="Xks-O9-yL4" firstAttribute="centerX" secondItem="E6d-Lt-JAU" secondAttribute="centerX" id="stV-E8-jOG"/>
+                            <constraint firstItem="Xks-O9-yL4" firstAttribute="centerY" secondItem="E6d-Lt-JAU" secondAttribute="centerY" id="vRb-fp-u2f"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicat" destination="Xks-O9-yL4" id="LeZ-Mb-PEb"/>
                         <outlet property="textQuote" destination="4me-N4-KKh" id="85W-wz-oLN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0w-nk-hAn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="99"/>
+            <point key="canvasLocation" x="804.375" y="98.239436619718305"/>
         </scene>
     </scenes>
     <resources>

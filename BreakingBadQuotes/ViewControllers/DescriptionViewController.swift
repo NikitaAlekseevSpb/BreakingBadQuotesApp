@@ -11,12 +11,15 @@ class DescriptionViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var textQuote: UITextView!
+    @IBOutlet var activityIndicat: UIActivityIndicatorView!
     
     // MARK: - Private Properties
     private var quotes: [Quote] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicat.startAnimating()
+        activityIndicat.hidesWhenStopped = true
         
         fetchQuote(from: URLS.breakingBadApi.rawValue)
         
@@ -29,10 +32,11 @@ class DescriptionViewController: UIViewController {
     
 
     // MARK: - Private Methods
-    private func fetchQuote(from url: String?){
+    private func fetchQuote(from url: String){
         NetworkManager.shared.fetchData(from: url) { quote in
             self.quotes = quote
             self.textQuote.text = self.quotes.randomElement()?.getFullQuote
+            self.activityIndicat.stopAnimating()
         }
     }
     

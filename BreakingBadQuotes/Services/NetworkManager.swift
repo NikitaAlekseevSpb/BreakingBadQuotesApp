@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class NetworkManager{
     
@@ -13,28 +14,22 @@ class NetworkManager{
     
     private init() {}
     
-    func fetchData(from url: String?, with complition: @escaping ([Quote])
+    func fetchData(from url: String, with complition: @escaping ([Quote])
             -> Void) {
-        guard let stringURL = url else { return }
-        guard let url = URL(string: stringURL) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            guard let data = data else { return }
-            
-            do{
-                let quote = try JSONDecoder().decode([Quote].self, from: data)
-                DispatchQueue.main.async {
-                    complition(quote)
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result{
+                case .success(let value):
+                    let quite = Quote.getQuote(from: value)
+                    
+                    DispatchQueue.main.async {
+                        complition(quite)
+                    }
+                    
+                case .failure(let error):
+                    print(error)
                 }
-            }catch let error {
-                print(error)
             }
-        }.resume()
     }
-        
 }
