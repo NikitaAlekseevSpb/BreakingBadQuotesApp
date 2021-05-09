@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,7 @@
 		FA8219492640065F00E020B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8219472640065F00E020B7 /* LaunchScreen.storyboard */; };
 		FA821951264006B400E020B7 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA821950264006B400E020B7 /* Quote.swift */; };
 		FA82195426401B5500E020B7 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82195326401B5500E020B7 /* DescriptionViewController.swift */; };
-		FACFB2CC2642D41900D262AA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFB2CB2642D41900D262AA /* NetworkManager.swift */; };
+		FACFB2CC2642D41900D262AA /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFB2CB2642D41900D262AA /* QuoteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		FA82194A2640065F00E020B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA821950264006B400E020B7 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		FA82195326401B5500E020B7 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
-		FACFB2CB2642D41900D262AA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FACFB2CB2642D41900D262AA /* QuoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,6 @@
 				B2C3C6D5E31E8D74F9DCE71A /* Pods-BreakingBadQuotes.debug.xcconfig */,
 				C112FA9724978A2D53FDA1DC /* Pods-BreakingBadQuotes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,7 +135,7 @@
 		FACFB2CA2642D3F200D262AA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FACFB2CB2642D41900D262AA /* NetworkManager.swift */,
+				FACFB2CB2642D41900D262AA /* QuoteManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -263,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACFB2CC2642D41900D262AA /* NetworkManager.swift in Sources */,
+				FACFB2CC2642D41900D262AA /* QuoteManager.swift in Sources */,
 				FA821951264006B400E020B7 /* Quote.swift in Sources */,
 				FA8219412640065F00E020B7 /* MainViewController.swift in Sources */,
 				FA82193D2640065F00E020B7 /* AppDelegate.swift in Sources */,

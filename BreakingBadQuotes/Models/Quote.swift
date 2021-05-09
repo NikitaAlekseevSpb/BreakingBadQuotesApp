@@ -7,19 +7,34 @@
 
 import Foundation
 
+struct BreakingBad: Decodable {
+    let characters: String?
+    let quotes: String?
+}
+
+struct Actor: Decodable {
+    let name: String?
+    let birthday: String?
+    let occupation: [String]?
+    let img: String?
+    let nickname: String?
+    
+    var getDescriptionOfActor: String {
+        """
+        Name: \(name ?? "")
+        Birthday: \(birthday ?? "")
+        Occupation: \(occupation?.joined(separator: ", ") ?? "")
+        Nickname: \(nickname ?? "")
+        """
+    }
+}
+
+
 struct Quote: Decodable {
     let quote_id: Int?
     let quote: String?
     let author: String?
     let series: String?
-    
-    var getFullQuote: String {
-        """
-        Autor: \(author ?? "")
-        
-        Quote: \(quote ?? "")
-        """
-    }
     
     init(quoteData: [String: Any]) {
         quote_id = quoteData["quote_id"] as? Int
@@ -38,5 +53,5 @@ struct Quote: Decodable {
 
 
 enum URLS: String {
-    case breakingBadApi = "https://www.breakingbadapi.com/api/quotes"
+    case breakingBadApi = "https://www.breakingbadapi.com/api/"
 }
