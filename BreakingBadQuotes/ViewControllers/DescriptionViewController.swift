@@ -10,7 +10,7 @@ import UIKit
 class DescriptionViewController: UIViewController {
 
     // MARK: - IB Outlets
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var imageView: ActorImageView!
     @IBOutlet var textQuote: UITextView!
     @IBOutlet var activityIndicat: UIActivityIndicatorView!
     
@@ -72,13 +72,8 @@ class DescriptionViewController: UIViewController {
 
                             Quote: \(quote?.quote ?? "")
                             """
-            DispatchQueue.global().async {
-                guard let imageActor = ImageManager.shared.fetchImage(from: character?.img) else {return}
-
-                DispatchQueue.main.async {
-                    self.imageView.image = UIImage(data: imageActor)
-            }
-        }
+            imageView.fetchImage(from: character?.img ?? "")
+            
         }else{ setupFullDescription()}
     }
 }
